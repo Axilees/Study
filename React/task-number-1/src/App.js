@@ -1,10 +1,12 @@
 import React, {Component} from "react";
+import Temp from "./Temp";
 
 class App extends Component{
     render(){
         return(
           <div className="App">
               <h1>Hi from REACT </h1>
+              <Temp/>
           </div>
         );
     }
@@ -42,9 +44,9 @@ class App extends Component{
         console.log("getSnapshotBeforeUpdate executed!");
     }
 
-    getDerivedStateFromError() {
-        console.log("getDerivedStateFromError executed!");
-    }
+    //  getDerivedStateFromError() {
+    //     console.log("getDerivedStateFromError executed!");
+    // }
 
     componentDidCatch() {
         console.log("componentDidCatch executed!");
