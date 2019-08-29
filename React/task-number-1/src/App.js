@@ -3,16 +3,27 @@ import Temp from "./Temp";
 
 class App extends Component{
     render(){
+        console.log('Render Executed!');
         return(
           <div className="App">
               <h1>Hi from REACT </h1>
-              <Temp/>
+              <button onClick={this.changeShowTemp}>CLOSE</button>
+              {this.state.showTemp ? <Temp/> : null
+              }
           </div>
         );
     }
 
+    changeShowTemp() {
+        this.setState(state => ({
+            showTemp: !state.showTemp
+        }));
+    }
+
     constructor() {
         super();
+        this.state = {showTemp: false};
+        this.changeShowTemp = this.changeShowTemp.bind(this);
         console.log("Constructor executed!");
     }
 
@@ -24,37 +35,39 @@ class App extends Component{
         console.log("ComponentWillMount executed!");
     }
 
-    componenDidUpdate() {
-        console.log("ComponentDidMount executed!");
-    }
+    // componenDidUpdate() {
+    //    console.log("ComponenDidUpdate executed!");
+    // }
 
     componentWillUnmount() {
         console.log("ComponentWillUnmount executed!");
     }
 
-    shouldComponentUpdate() {
-        console.log("shouldComponentUpdate executed!");
-    }
-
-    getDerivedStateFromProps() {
-        console.log("getDerivedStateFromProps executed!");
-    }
-
-    getSnapshotBeforeUpdate() {
-        console.log("getSnapshotBeforeUpdate executed!");
-    }
-
-    //  getDerivedStateFromError() {
-    //     console.log("getDerivedStateFromError executed!");
+    //  shouldComponentUpdate() {
+    //     console.log("shouldComponentUpdate executed!");
     // }
 
-    componentDidCatch() {
-        console.log("componentDidCatch executed!");
+    static getDerivedStateFromProps(state, props) {
+        console.log("getDerivedStateFromProps executed!");
+        return state;
     }
 
-    componentWillUpdate() {
-        console.log("consoleWillUpdate executed!");
-    }
+    //   getSnapshotBeforeUpdate() {
+    //      console.log("getSnapshotBeforeUpdate executed!");
+    // }
+
+    // static  getDerivedStateFromError(state,props) {
+    //    console.log("getDerivedStateFromError executed!");
+    //   return state;
+    // }
+
+    //  componentDidCatch() {
+    //     console.log("componentDidCatch executed!");
+    // }
+
+    //componentWillUpdate() {
+    //   console.log("consoleWillUpdate executed!");
+    // }
 
 }
 

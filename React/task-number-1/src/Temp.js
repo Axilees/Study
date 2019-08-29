@@ -8,6 +8,7 @@ class Temp extends Component {
     }
 
     render() {
+        console.log('Temp Render Executed!');
         return (
             <h2>This is test!</h2>
         );
