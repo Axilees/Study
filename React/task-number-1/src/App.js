@@ -3,12 +3,12 @@ import Temp from "./Temp";
 
 class App extends Component{
     render(){
-        console.log('Render Executed!');
+        console.log('App Render Executed!');
         return(
           <div className="App">
               <h1>Hi from REACT </h1>
               <button onClick={this.changeShowTemp}>CLOSE</button>
-              {this.state.showTemp ? <Temp/> : null
+              {this.state.showTemp ? <Temp testProp = { 2 + 2 }/> : null
               }
           </div>
         );
@@ -24,37 +24,39 @@ class App extends Component{
         super();
         this.state = {showTemp: false};
         this.changeShowTemp = this.changeShowTemp.bind(this);
-        console.log("Constructor executed!");
+        console.log("App Constructor executed!");
     }
 
     componentDidMount() {
-        console.log("ComponentDidMount executed!");
+        console.log("App ComponentDidMount executed!");
     }
 
-    componentWillMount() {
-        console.log("ComponentWillMount executed!");
-    }
+  //  componentWillMount() {
+   //     console.log("ComponentWillMount executed!");
+   // }
 
-    // componenDidUpdate() {
-    //    console.log("ComponenDidUpdate executed!");
-    // }
+     componentDidUpdate(prevProps,PrevState, snapshot) {
+        console.log("App ComponenDidUpdate executed! "+ JSON.stringify(snapshot));
+     }
 
     componentWillUnmount() {
-        console.log("ComponentWillUnmount executed!");
+        console.log("App ComponentWillUnmount executed!");
     }
 
-    //  shouldComponentUpdate() {
-    //     console.log("shouldComponentUpdate executed!");
-    // }
+      shouldComponentUpdate(nextProps, nextState) {
+         console.log("App shouldComponentUpdate executed!");
+         return true;
+     }
 
     static getDerivedStateFromProps(state, props) {
-        console.log("getDerivedStateFromProps executed!");
+        console.log("App getDerivedStateFromProps executed!");
         return state;
     }
 
-    //   getSnapshotBeforeUpdate() {
-    //      console.log("getSnapshotBeforeUpdate executed!");
-    // }
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+          console.log("App getSnapshotBeforeUpdate executed!");
+          return {message:"SNAPSHOT!!!!"};
+     }
 
     // static  getDerivedStateFromError(state,props) {
     //    console.log("getDerivedStateFromError executed!");
