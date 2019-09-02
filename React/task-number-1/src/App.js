@@ -1,34 +1,59 @@
 import React, {Component} from "react";
 import Temp from "./Temp";
+import Justice from "./Justice";
 
 class App extends Component{
     render(){
         console.log('App Render Executed!');
+        const msg = this.state.messages.map(m => <li>{m}</li>);
         return(
           <div className="App">
               <h1>Hi from REACT </h1>
-              <button onClick={this.changeShowTemp}>CLOSE</button>
-              {this.state.showTemp ? <Temp testProp = { 2 + 2 }/> : null
-              }
+              <button onClick={this.changeShowTemp}>SHOW TEMP</button>
+              <br/><br/>
+              <button onClick={this.changeShowJustice}>SHOW JUSTICE</button>
+              <Temp showTemp={this.state.showTemp} callBackFunction={this.addMessage}/>
+              <ul>
+                  {(this.state.messages || []).map(m => (<li key={Math.random()}>{m}</li>))}
+              </ul>
+              {this.state.showJustice ? <Justice callBackFunction={this.addMessage}/> : null}
+
           </div>
         );
     }
 
-    changeShowTemp() {
+
+    changeShowTemp = () => {
         this.setState(state => ({
             showTemp: !state.showTemp
         }));
     }
 
+    changeShowJustice = () => {
+        this.setState(state => ({
+            showJustice: !state.showJustice
+        }))
+    }
+
+    addMessage = (childData) => {
+        this.setState(state => ({
+            messages: state.messages.concat(childData)
+        }))
+    }
+
     constructor() {
         super();
-        this.state = {showTemp: false};
-        this.changeShowTemp = this.changeShowTemp.bind(this);
+        this.state = {
+            showTemp: false,
+            showJustice: false,
+            messages: []
+        };
         console.log("App Constructor executed!");
     }
 
     componentDidMount() {
         console.log("App ComponentDidMount executed!");
+        this.addMessage("App ComponentDidMount executed!");
     }
 
   //  componentWillMount() {
