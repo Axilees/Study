@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import InputComponent from "./InputComponent";
 import OutputComponent from "./OutputComponent";
 import withStyles from "@material-ui/core/styles/withStyles";
-import makeStyles from "@material-ui/core/styles/makeStyles";
+import {ValueContext} from "./ValueContext";
 import Paper from "@material-ui/core/Paper";
 
 const mainStyle = {
@@ -29,16 +29,25 @@ const mainStyle = {
 class App extends Component {
     constructor(props) {
         super(props);
+        this.state = {value: "", changeValue: this.changeValue}
     }
+
+    changeValue = (event) =>{
+        this.setState(state=>({
+            value: event.target.value
+        }));
+    };
 
     render() {
         const {classes} = this.props;
         return (
             <div>
-                <Paper className={classes.root}>
-                    <InputComponent inputStyle = {classes.input}/>
-                    <OutputComponent inputStyle = {classes.output}/>
-                </Paper>
+                <ValueContext.Provider value={this.state}>
+                    <Paper className={classes.root}>
+                        <InputComponent inputStyle = {classes.input}/>
+                        <OutputComponent inputStyle = {classes.output}/>
+                    </Paper>
+                </ValueContext.Provider>
             </div>
         );
     }
