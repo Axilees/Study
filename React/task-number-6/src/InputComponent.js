@@ -14,7 +14,7 @@ function ImportComponent(props) {
                             id="standard-value"
                             label="Value"
                             style={{width: 200}}
-                            onChange={(e) => changeValue(e)}
+                            onChange={(e) => changeValue(e.target.value)}
                             margin="normal"
                         />
                     </Paper>

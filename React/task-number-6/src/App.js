@@ -32,9 +32,9 @@ class App extends Component {
         this.state = {value: "", changeValue: this.changeValue}
     }
 
-    changeValue = (event) =>{
+    changeValue = (value) =>{
         this.setState(state=>({
-            value: event.target.value
+            value: value
         }));
     };
 
