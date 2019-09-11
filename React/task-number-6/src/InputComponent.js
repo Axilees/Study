@@ -9,7 +9,7 @@ function ImportComponent(props) {
         <ValueContext.Consumer>
             {({changeValue}) => (
                 <div className={props.inputStyle}>
-                    <Paper style={{padding: 20}}>
+                    <Paper style={{padding: 20,  margin: 20, height: 100}}>
                         <TextField
                             id="standard-value"
                             label="Value"

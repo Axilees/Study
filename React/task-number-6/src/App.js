@@ -10,7 +10,10 @@ const mainStyle = {
         marginTop: 50,
         marginLeft: "20%",
         width: 900,
-        display: "inline-block"
+        display: "inline-block",
+        verticalAlign: "center",
+        position: "relative",
+        height: 200,
     },
     input:{
         width: 400,
@@ -23,6 +26,7 @@ const mainStyle = {
         display: 'inline-block',
         marginRight: 30,
         marginLeft: 15,
+        position: "absolute"
     }
 };
 

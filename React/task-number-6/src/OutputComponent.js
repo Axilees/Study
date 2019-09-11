@@ -8,7 +8,7 @@ function OutputComponent(props) {
         <ValueContext.Consumer>
             {({value}) => (
                 <div className={props.inputStyle}>
-                    <Paper style={{padding: 20}}>
+                    <Paper style={{padding: 20, margin: 20, overflow:"hidden", height: 100}}>
                         <Typography variant="h3"> {value} </Typography>
                     </Paper>
                 </div>
