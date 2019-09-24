@@ -17,7 +17,7 @@ class App extends Component<{}, {}> {
                 <TestComponent>
                     <h1>Test</h1>
                 </TestComponent>
-                <SuperForm/>
+                <SuperForm title = "Supa Dupa Fly!!!"/>
             </div>
         );
     }

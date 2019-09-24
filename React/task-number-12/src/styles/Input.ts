@@ -13,8 +13,9 @@ const Input = styled.input<InputProps>`
   width: ${props => props.width || 100}%;
   max-width: ${props => props.maxWidth};
   heigth: ${props => props.height || 50}px;
-  background-color: rgba(246, 246, 246, 0);
+  background-color: blue;
   border: 1px solid #d8dde6;
+  margin-bottom: 10px;
   border-radius: 5px;
   text-indent: 20px;
     font-size: 14px;
