@@ -1,0 +1,32 @@
+body{
+    font-family: Mansalva, sans-serif;
+}
+section {
+    margin-top: 40px;
+}
+
+h1{
+    font-family: Mansalva, sans-serif;
+}
+
+[disabled] {
+    background-color: violet;
+    font-family: Turret Road, sans-serif;
+}
+
+.main button{
+    font-family: inherit;
+}
+
+section + button {
+    color: blue;
+}
+
+h1 ~ button {
+    color: red;
+}
+
+div > button {
+    color: white;
+}
+
