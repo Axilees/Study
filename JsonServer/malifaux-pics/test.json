@@ -1,0 +1,30 @@
+{
+ "models":[
+  {
+    "id":1,
+	"title": "Colette",
+	"url": "http://www.brueckenkopf-online.com/wp-content/uploads/2019/05/WY-M3E-Colette_Art.jpg"
+  },
+  {
+    "id":2,
+	"title": "Spit Hig",
+	"url": "http://www.brueckenkopf-online.com/wp-content/uploads/2019/05/WY-M3E-SpitHog_Art.jpg"
+  },
+  {
+    "id":3,
+	"title": "Hans",
+	"url": "http://www.brueckenkopf-online.com/wp-content/uploads/2019/05/WY-M3E-Hans_Art.jpg"
+  },
+  {
+    "id":4,
+	"title": "Misaki",
+	"url": "http://www.brueckenkopf-online.com/wp-content/uploads/2019/05/WY-M3E-Misaki_Art.jpg"
+  }
+  {
+    "id":5,
+	"title": "Gokudo",
+	"url": "http://www.brueckenkopf-online.com/wp-content/uploads/2019/05/WY-M3E-Gokudo_Art.jpg"
+  }    
+  
+  ]
+}
