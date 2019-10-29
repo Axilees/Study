@@ -1,0 +1,14 @@
+{
+  "models": [
+    {
+      "name": "War Pig",
+      "faction": "Bayou",
+      "description": "Pure violence"
+    },
+    {
+      "name": "Piglet",
+      "faction": "Bayou",
+      "description": "Small and puny"
+    }
+  ]
+}

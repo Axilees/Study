@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        section {
+            margin-top: 100px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+  <section style="background: red" class="main">
+      <h1>Cascading means that multiple styles can be applied to same element</h1>
+      <h1>Specifity Inline styles > Id selectors > Classes, Pseudo Classes and Attributes > Tag and Pseudo Element Selectors </h1>
+      <button disabled class="btn">Disabled1 </button>
+      <button disabled class="btn">Disabled2</button>
+      <div>
+          <p></p>
+          <h1>Id's and classes has better performance</h1>
+          <button disabled class="btn">Disabled2.5</button>
+          <div></div>
+          <button disabled class="btn">Disabled2.6</button>
+      </div>
+
+  </section>
+  <button disabled>Disabled3</button>
+</body>
+</html>
